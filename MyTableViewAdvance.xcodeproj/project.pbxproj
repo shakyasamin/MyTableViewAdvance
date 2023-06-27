@@ -16,6 +16,7 @@
 		28C679C52A4AB45600BF95EC /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C679C42A4AB45600BF95EC /* CollectionTableViewCell.swift */; };
 		28C679C72A4AB47A00BF95EC /* TableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C679C62A4AB47A00BF95EC /* TableCollectionViewCell.swift */; };
 		28C679C92A4AB89700BF95EC /* LaFerrari - Official video (64 kbps).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 28C679C82A4AB89700BF95EC /* LaFerrari - Official video (64 kbps).mp3 */; };
+		28C679CB2A4AE83900BF95EC /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C679CA2A4AE83900BF95EC /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		28C679C42A4AB45600BF95EC /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
 		28C679C62A4AB47A00BF95EC /* TableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCollectionViewCell.swift; sourceTree = "<group>"; };
 		28C679C82A4AB89700BF95EC /* LaFerrari - Official video (64 kbps).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "LaFerrari - Official video (64 kbps).mp3"; sourceTree = "<group>"; };
+		28C679CA2A4AE83900BF95EC /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				28C679BA2A4AB2AD00BF95EC /* LaunchScreen.storyboard */,
 				28C679BD2A4AB2AD00BF95EC /* Info.plist */,
 				28C679C82A4AB89700BF95EC /* LaFerrari - Official video (64 kbps).mp3 */,
+				28C679CA2A4AE83900BF95EC /* Models.swift */,
 			);
 			path = MyTableViewAdvance;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				28C679B42A4AB2AC00BF95EC /* ViewController.swift in Sources */,
 				28C679B02A4AB2AC00BF95EC /* AppDelegate.swift in Sources */,
 				28C679B22A4AB2AC00BF95EC /* SceneDelegate.swift in Sources */,
+				28C679CB2A4AE83900BF95EC /* Models.swift in Sources */,
 				28C679C72A4AB47A00BF95EC /* TableCollectionViewCell.swift in Sources */,
 				28C679C52A4AB45600BF95EC /* CollectionTableViewCell.swift in Sources */,
 			);
