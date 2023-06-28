@@ -58,13 +58,15 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return  models.count
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch models[section] {
         case .list(let models): return models.count
-        case .collectionView(let models, _): return models.count
+        case .collectionView(_, _): return 1
         }
     }
     
@@ -80,19 +82,20 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
             cell.configure(with: models)
             return cell
-            
         }
-        
-        
-        
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("hello \(indexPath.row)")
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        switch models[indexPath.section] {
+        case .list(_): return 50
+        case .collectionView(_, let rows): return 170 * CGFloat(rows)
+        }
+
     }
 }
 

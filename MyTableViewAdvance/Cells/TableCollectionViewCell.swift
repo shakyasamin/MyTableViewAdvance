@@ -42,7 +42,6 @@ class TableCollectionViewCell: UICollectionViewCell {
     public func configure(with model:CollectionTableCellModel){
         myLabel.text = model.title
         myImageView.image = UIImage(named: model.imageName)
-        
     }
     
 }

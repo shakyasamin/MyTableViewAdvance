@@ -10,7 +10,7 @@ import UIKit
 class CollectionTableViewCell: UITableViewCell{
     
     static let identifier = "CollectionTableViewCell"
-
+    
     private var models = [CollectionTableCellModel]()
     
     private let collectionView: UICollectionView
@@ -53,7 +53,6 @@ class CollectionTableViewCell: UITableViewCell{
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
 
 extension CollectionTableViewCell : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -73,6 +72,8 @@ extension CollectionTableViewCell : UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        print("hiii \(indexPath.row)")
+        
     }
     
     
