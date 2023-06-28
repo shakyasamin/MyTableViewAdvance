@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		289F44C42A4BFE7800125A74 /* LaFerrari - Official video (64 kbps).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 289F44C32A4BFE7800125A74 /* LaFerrari - Official video (64 kbps).mp3 */; };
+		289F44C62A4C3FFA00125A74 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 289F44C52A4C3FFA00125A74 /* video.mp4 */; };
 		28C679B02A4AB2AC00BF95EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C679AF2A4AB2AC00BF95EC /* AppDelegate.swift */; };
 		28C679B22A4AB2AC00BF95EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C679B12A4AB2AC00BF95EC /* SceneDelegate.swift */; };
 		28C679B42A4AB2AC00BF95EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C679B32A4AB2AC00BF95EC /* ViewController.swift */; };
@@ -20,7 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		289F44C32A4BFE7800125A74 /* LaFerrari - Official video (64 kbps).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "LaFerrari - Official video (64 kbps).mp3"; sourceTree = "<group>"; };
+		289F44C52A4C3FFA00125A74 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		28C679AC2A4AB2AC00BF95EC /* MyTableViewAdvance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTableViewAdvance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28C679AF2A4AB2AC00BF95EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28C679B12A4AB2AC00BF95EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +73,7 @@
 				28C679BA2A4AB2AD00BF95EC /* LaunchScreen.storyboard */,
 				28C679BD2A4AB2AD00BF95EC /* Info.plist */,
 				28C679CA2A4AE83900BF95EC /* Models.swift */,
-				289F44C32A4BFE7800125A74 /* LaFerrari - Official video (64 kbps).mp3 */,
+				289F44C52A4C3FFA00125A74 /* video.mp4 */,
 			);
 			path = MyTableViewAdvance;
 			sourceTree = "<group>";
@@ -147,8 +147,8 @@
 			files = (
 				28C679BC2A4AB2AD00BF95EC /* LaunchScreen.storyboard in Resources */,
 				28C679B92A4AB2AD00BF95EC /* Assets.xcassets in Resources */,
-				289F44C42A4BFE7800125A74 /* LaFerrari - Official video (64 kbps).mp3 in Resources */,
 				28C679B72A4AB2AC00BF95EC /* Main.storyboard in Resources */,
+				289F44C62A4C3FFA00125A74 /* video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

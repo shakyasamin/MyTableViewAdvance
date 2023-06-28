@@ -24,6 +24,7 @@ class TableCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         contentView.addSubview(myLabel)
         contentView.addSubview(myImageView)
     }

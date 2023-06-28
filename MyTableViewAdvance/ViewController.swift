@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -25,9 +26,31 @@ class ViewController: UIViewController {
         setUpModels()
         
         view.addSubview(table)
+        table.tableHeaderView = createTableHeader()
         table.delegate = self
         table.dataSource = self
         
+    }
+    
+    private func createTableHeader() -> UIView? {
+        guard let path = Bundle.main.path(forResource: "video", ofType: "mp4") else {
+            return nil
+        }
+        let url = URL(fileURLWithPath: path)
+        
+        let player = AVPlayer(url: url)
+        player.volume = 0
+         
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.width))
+        
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = headerView.bounds
+        headerView.layer.addSublayer(playerLayer)
+        
+        playerLayer.videoGravity = .resizeAspectFill
+        player.play()
+        
+        return headerView
     }
     
     private func setUpModels() {
@@ -47,7 +70,6 @@ class ViewController: UIViewController {
             ListCellModel(title: "Third Thing"),
             ListCellModel(title: "Four Thing"),
             ListCellModel(title: "Demo Thing")
-            
         ]))
     }
     
@@ -81,21 +103,27 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         case .collectionView(let models, _):
             let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
             cell.configure(with: models)
+            cell.delegate = self
             return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print("hello \(indexPath.row)")
+        print("Did select normal list item \(indexPath.row)")
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch models[indexPath.section] {
         case .list(_): return 50
-        case .collectionView(_, let rows): return 170 * CGFloat(rows)
+        case .collectionView(_, let rows): return 180 * CGFloat(rows)
         }
+    }
+}
 
+extension ViewController: CollectionTableViewCellDelegate {
+    func didSelectItem(with model: CollectionTableCellModel) {
+        print("Selected \(model.title)")
     }
 }
 

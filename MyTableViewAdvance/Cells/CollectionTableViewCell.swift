@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol CollectionTableViewCellDelegate: AnyObject {
+    func didSelectItem(with model: CollectionTableCellModel)
+}
+
 class CollectionTableViewCell: UITableViewCell{
+    
+    public weak var delegate: CollectionTableViewCellDelegate?
     
     static let identifier = "CollectionTableViewCell"
     
@@ -59,6 +65,7 @@ extension CollectionTableViewCell : UICollectionViewDelegate, UICollectionViewDa
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return models.count
     }
@@ -71,8 +78,11 @@ extension CollectionTableViewCell : UICollectionViewDelegate, UICollectionViewDa
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let model = models[indexPath.row]
         collectionView.deselectItem(at: indexPath, animated: true)
-        print("hiii \(indexPath.row)")
+        delegate?.didSelectItem(with: model)
+        
+//        print("hiii \(indexPath.row)")
         
     }
     
